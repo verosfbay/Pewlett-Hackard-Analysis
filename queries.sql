@@ -84,3 +84,34 @@ on ri.emp_no = de.emp_no
 where de.to_date = ('9999-01-01'); 
 
 select * from current_emp; 
+
+-- aliases
+select ri.emp_no,
+	ri.first_name,
+ri.last_name,
+de.to_date
+from retirement_info as ri
+left join dept_employees as de 
+on ri.emp_no = de.emp_no; 
+	
+-- join the retirement_info and dept_employees tables
+select ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	   de.to_date
+into current_emp
+from retirement_info as ri
+left join dept_employees as de 
+on ri.emp_no = de.emp_no 
+where de.to_date = ('9999-01-01'); 
+
+select * from current_emp; 
+
+-- employee count by department number
+select count(ce.emp_no), de.dept_no
+from current_emp as ce
+left join dept_employees as de 
+on ce.emp_no = de.emp_no
+group by de.dept_no 
+order by de.dept_no;
+
