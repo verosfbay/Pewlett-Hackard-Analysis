@@ -52,3 +52,9 @@ on e.emp_no = t.emp_no
 where de.to_date = '9999-01-01'
 	and (e.birth_date between '1965-01-01' and '1965-12-31')
 order by e.emp_no; 
+
+select * from mentorship_eligibility ; 
+
+select count(title), title from mentorship_eligibility
+group by title
+order by count(title); 
