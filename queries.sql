@@ -165,3 +165,46 @@ inner join departments as d
 on (de.dept_no = d.dept_no); 
 
 select * from dept_info ; 
+
+-- Create a query that will return only the information relevant to the Sales team. 
+-- The requested list includes:
+	-- Employee numbers
+	-- Employee first name
+	-- Employee last name
+	-- Employee department name
+select ri.emp_no,
+		ri.first_name,
+		ri.last_name,
+		d.dept_name
+into sales_info 
+	from retirement_info as ri 
+	inner join dept_employees as de
+	on (ri.emp_no = de.emp_no)
+inner join departments as d
+on (d.dept_name = 'Sales');
+
+-- Create a mentoring table
+select ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	d.dept_name
+into mentor_info
+from retirement_info as ri
+inner join dept_employees as de
+on (ri.emp_no = de.emp_no)
+inner join departments as d
+on (de.dept_no = d.dept_no)
+where d.dept_name in ('Sales', 'Development'); 
+
+
+SELECT ri.emp_no,
+ri.first_name,
+ri.last_name,
+d.dept_name	
+INTO mentor_info
+FROM retirement_info as ri
+INNER JOIN dept_emp AS de
+ON (ri.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+WHERE d.dept_name IN ('Sales','Development');
