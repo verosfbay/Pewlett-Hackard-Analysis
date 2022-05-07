@@ -55,3 +55,13 @@ primary key (emp_no)
 );
 
 select * from departments;
+
+select * from employees; 
+
+select * from dept_manager;
+
+select * from salaries ; 
+
+select * from dept_employees;
+
+select * from titles; 
