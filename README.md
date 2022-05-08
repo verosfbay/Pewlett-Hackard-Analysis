@@ -22,12 +22,15 @@ Currently there are not enough qualified, retirement-ready employees in the depa
 ### Two additional queries to glean more insights 
 * The most common title of the employees who are eligible to become mentors is 'Staff' (447)
 <img width="204" alt="Screen Shot 2022-05-07 at 4 45 45 PM" src="https://user-images.githubusercontent.com/95447175/167275727-0f136b85-71c6-4166-aabb-4b3c3856c4e9.png">
+
 select count(title), title from mentorship_eligibility
 group by title
 order by count(title) desc; 
 
 
+
 * 72,458 employees will retire soon 
 <img width="92" alt="Screen Shot 2022-05-07 at 5 01 22 PM" src="https://user-images.githubusercontent.com/95447175/167276029-88488397-0fb7-4fa2-b2e6-0fc961fdfc50.png">
+
 select sum(count) from retiring_titles; 
 
