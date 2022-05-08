@@ -1,4 +1,4 @@
-# Pewlett-Hackard-Analysis
+# Pewlett Hackard Analysis
 
 ## Overview
 The purpose of this analysis is to show the managers at Pewlett Hackard the amount and types of employees that will be retiring soon. This is important information because the company will be tasked with filling those roles and spending a significant amount on training new employees. It is well known that for any company, it is cheaper to keep and train an existing employee than hire a new one. Unfortunately, in this case that is not an option as these employees are retiring and thus not cannot be re-trained. The company must be prepared for a huge shift in the workforce as Baby Boomers retire in droves and Millennials and Gen Zers are entering or getting established. 
