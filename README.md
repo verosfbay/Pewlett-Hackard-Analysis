@@ -26,6 +26,7 @@ select count(title), title from mentorship_eligibility
 group by title
 order by count(title) desc; 
 
+
 * 72,458 employees will retire soon 
 <img width="92" alt="Screen Shot 2022-05-07 at 5 01 22 PM" src="https://user-images.githubusercontent.com/95447175/167276029-88488397-0fb7-4fa2-b2e6-0fc961fdfc50.png">
 select sum(count) from retiring_titles; 
