@@ -20,14 +20,12 @@ As shown by the table below,
 Currently there are not enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees. There are only 1549 mentors for 72,458 future employees, which means that each mentor would be in charge of 46 employees. This is a an unrealistic expectation as the mentors would be unable to provide one-on-one training to so many employees. Ideally, mentors should not have more than a handful of trainees. Another possible but not ideal solution is to create a class environment where the mentors teach a big group of people, and those people can ask questions for half the session. 
 
 ### Two additional queries to glean more insights 
-As shown by the table below,
 * The most common title of the employees who are eligible to become mentors is 'Staff' (447)
 <img width="204" alt="Screen Shot 2022-05-07 at 4 45 45 PM" src="https://user-images.githubusercontent.com/95447175/167275727-0f136b85-71c6-4166-aabb-4b3c3856c4e9.png">
 select count(title), title from mentorship_eligibility
 group by title
 order by count(title) desc; 
 
-As shown by the table below,
 * 72,458 employees will retire soon 
 <img width="92" alt="Screen Shot 2022-05-07 at 5 01 22 PM" src="https://user-images.githubusercontent.com/95447175/167276029-88488397-0fb7-4fa2-b2e6-0fc961fdfc50.png">
 select sum(count) from retiring_titles; 
